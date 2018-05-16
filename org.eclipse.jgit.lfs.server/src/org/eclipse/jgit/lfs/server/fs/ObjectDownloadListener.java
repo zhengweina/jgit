@@ -129,6 +129,7 @@ public class ObjectDownloadListener implements WriteListener {
 						outChannel.write(buffer);
 					} else {
 						context.complete();
+						//when the complete, the out may be null
 						return;
 					}
 				}
